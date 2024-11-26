@@ -1,26 +1,21 @@
 from abc import ABC, abstractmethod
 class Pessoa(ABC):
-    def __init__(self, nome, altura, peso, idade):
+    def __init__(self, nome, sexo, idade):
         self.__nome = nome
-        self.__altura = altura
-        self.__peso = peso
+        self.__sexo = sexo
         self.__idade = idade
 
     def getNome(self):
         return self.__nome
-    def getNome(self):
-        return self.__altura
-    def getNome(self):
-        return self.__peso
+    def getSexo(self):
+        return self.__sexo
     def getIdade(self):
         return self.__idade
     
     def setNome(self, nome):
         self.__nome = nome
-    def setAltura(self, altura):
-        self.__altura = altura
-    def setPeso(self, peso):
-        self.__peso = peso
+    def setSexo(self, sexo):
+        self.__sexo = sexo
     def setIdade(self, idade):
         self.__idade = idade
 
