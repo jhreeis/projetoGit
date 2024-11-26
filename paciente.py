@@ -2,7 +2,7 @@ from pessoa import Pessoa
 
 class Paciente(Pessoa):
     def __init__(self, nome, idade, sexo, temperatura, pressao, peso):
-        super().__init__(nome, sexo, idade)
+        super().__init__(nome, idade, sexo)
         self.__temperatura = temperatura
         self.__pressao = pressao
         self.__peso = peso
@@ -20,3 +20,6 @@ class Paciente(Pessoa):
         self.__pressao = pressao
     def setPeso(self, peso):
         self.__peso = peso
+
+    def mostrar(self):
+        return (f"{self.getSexo()}\n que se chama {self.getNome()}, com {self.getIdade()} anos, pesando {self.getPeso()}Kg, com temperatura de {self.getTemperatura()}°C, e pressão {self.getPressao()}  ")

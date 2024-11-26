@@ -14,8 +14,8 @@ class Pessoa(ABC):
     
     def setNome(self, nome):
         self.__nome = nome
-    def setSexo(self, sexo):
-        self.__sexo = sexo
+    def setIdade(self, sexo):
+        self.__idade = sexo
     def setIdade(self, idade):
         self.__idade = idade
 
