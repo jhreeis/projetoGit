@@ -16,35 +16,51 @@ def cadastroPessoa():
 
     if sexo == "Homem":
         if nome == "":
-            messagebox.showinfo("Erro", "Nome deve ser preenchido.")
+            messagebox.showinfo("Erro", "Nome do paciente deve ser preenchido.")
+        elif not nome.isalpha():
+            messagebox.showinfo("Erro", "Nome inválido.")
         elif idade == "":
-            messagebox.showinfo("Erro", "Idade deve ser preenchida.")
+            messagebox.showinfo("Erro", "Idade do paciente deve ser preenchida.")
+        elif not idade.isdigit():
+            messagebox.showinfo("Erro", "Idade inválida.")
         elif temperatura == "":
-            messagebox.showinfo("Erro", "Temperatura do paciente deve ser preenchido na opção cachorro.")
+            messagebox.showinfo("Erro", "Temperatura do paciente deve ser preenchida.")
+        elif not temperatura.isdigit():
+            messagebox.showinfo("Erro", "Temperatura inválida.")
         elif pressao == "":
             messagebox.showinfo("Erro", "Pressão do paciente deve ser preenchida.")
         elif peso == "":
             messagebox.showinfo("Erro", "Peso do paciente deve ser preenchido.")
+        elif not peso.isdigit():
+            messagebox.showinfo("Erro", "Peso inválido.")
         else:
           h = PacienteH(nome, idade, temperatura, pressao, peso)
           salvar(h)
           messagebox.showinfo("Cadastro", f"Paciente {nome} cadastrado com sucesso!")
 
     else:
-        if nome == "":
-             messagebox.showinfo("Erro", "Nome deve ser preenchido.")
-        elif idade == "":
-          messagebox.showinfo("Erro", "Idade deve ser preenchida.")
-        elif temperatura == "":
-          messagebox.showinfo("Erro", "Temperatura do paciente deve ser preenchida.")
-        elif pressao == "":
-          messagebox.showinfo("Erro", "Pressão do paciente deve ser preenchida.")
-        elif peso == "":
-          messagebox.showinfo("Erro", "Peso do paciente deve ser preenchido.")
-        else:
+         if nome == "":
+            messagebox.showinfo("Erro", "Nome do paciente deve ser preenchido.")
+         elif not nome.isalpha():
+            messagebox.showinfo("Erro", "Nome inválido.")
+         elif idade == "":
+            messagebox.showinfo("Erro", "Idade deve ser preenchida.")
+         elif not idade.isdigit():
+            messagebox.showinfo("Erro", "Idade inválida.")
+         elif temperatura == "":
+            messagebox.showinfo("Erro", "Temperatura do paciente deve ser preenchida.")
+         elif not temperatura.isdigit():
+            messagebox.showinfo("Erro", "Temperatura inválida.")
+         elif pressao == "":
+            messagebox.showinfo("Erro", "Pressão do paciente deve ser preenchida.")
+         elif peso == "":
+            messagebox.showinfo("Erro", "Peso do paciente deve ser preenchido.")
+         elif not peso.isdigit():
+            messagebox.showinfo("Erro", "Peso inválido.")
+         else:
           m = PacienteM(nome, idade, temperatura, pressao, peso)
           salvar(m)
-          messagebox.showinfo("Cadastro", f"Paciente {nome} cadastrado com sucesso!") 
+          messagebox.showinfo("Cadastro", f"Paciente {nome} cadastrada com sucesso!") 
 
 
 def salvar(obj):
