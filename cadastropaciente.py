@@ -7,7 +7,7 @@ from tkinter import ttk
 lista = []
 
 def cadastroPaciente():
-    nome = entryIdade.get()
+    nome = entryNome.get()
     idade = entryIdade.get()
     temperatura = entryTemperatura.get()
     pressao = entryPressao.get()
@@ -47,15 +47,14 @@ def cadastroPaciente():
              salvar(m)
              messagebox.showinfo("Cadastro", f"Paciente {nome} cadastrado com sucesso!") 
 
+
 def salvar(obj):
-   lista.append(obj)
+    lista.append(obj)
 
 def atualizarListbox():
     listbox.delete(0, tk.END)
     for obj in lista:
-      listbox.insert(tk.END, obj.mostrar())
- 
-
+        listbox.insert(tk.END, obj.mostrar())
 
 janela =  tk.Tk()
 janela.title("Cadastro de pacientes do Hospital")
@@ -112,7 +111,7 @@ entryPeso = tk.Entry(tab1, font=("", 15))
 entryPeso.grid(row=4, column=1, sticky="nsew", padx=10, pady=5)
 
 tk.Label(tab1, text="Sexo", font=("", 15)).grid(row=5, column=0, sticky="w", padx=10)
-varSexo = tk.StringVar(value="Feminino")
+varSexo = tk.StringVar(value="PacienteM")
 
 tk.Radiobutton(tab1, text="Mulher", font=("", 10), variable=varSexo, value="PacienteM").grid(row=5, column=1, sticky="w", padx=10)
 tk.Radiobutton(tab1, text="Homem", font=("", 10), variable=varSexo, value="PacienteH").grid(row=5, column=1, sticky="e", padx=10)
