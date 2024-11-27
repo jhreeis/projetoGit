@@ -4,8 +4,10 @@ import tkinter as tk
 from tkinter import messagebox
 from tkinter import ttk
 
+#Criação da Lista de pacientes
 lista = []
 
+#Função de cadastro de pacientes
 def cadastroPessoa():
     nome = entryNome.get()
     idade = entryIdade.get()
@@ -62,15 +64,17 @@ def cadastroPessoa():
           salvar(m)
           messagebox.showinfo("Cadastro", f"Paciente {nome} cadastrada com sucesso!") 
 
-
+#Função que salva os pacientes e seus dados na lista
 def salvar(obj):
     lista.append(obj)
 
+#Função que atualiza a lista de pacientes
 def atualizarListbox():
     listbox.delete(0, tk.END)
     for obj in lista:
         listbox.insert(tk.END, obj.mostrar())
 
+#Criação das janelas, tabs, entradas, labels e botões
 janela =  tk.Tk()
 janela.title("Cadastro de pacientes do Hospital")
 janela.geometry("500x300")
@@ -137,4 +141,5 @@ listbox.config(font=("", 15))
 listbox.grid(row=0, column=0, sticky="nsew", padx=10, pady=10)
 tk.Button(tab2, text="Atualizar",font=("", 15), command=atualizarListbox).grid(row=1, column=0, sticky="nsew")
 
+#Função que impede que a janela abra e feche imediatamente
 janela.mainloop()
