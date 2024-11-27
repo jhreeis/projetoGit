@@ -6,7 +6,7 @@ from tkinter import ttk
 
 lista = []
 
-def cadastroPaciente():
+def cadastroPessoa():
     nome = entryNome.get()
     idade = entryIdade.get()
     temperatura = entryTemperatura.get()
@@ -31,21 +31,20 @@ def cadastroPaciente():
           messagebox.showinfo("Cadastro", f"Paciente {nome} cadastrado com sucesso!")
 
     else:
-        if sexo == "Mulher":
-           if nome == "":
+        if nome == "":
              messagebox.showinfo("Erro", "Nome deve ser preenchido.")
-           elif idade == "":
-             messagebox.showinfo("Erro", "Idade deve ser preenchida.")
-           elif temperatura == "":
-             messagebox.showinfo("Erro", "Temperatura do paciente deve ser preenchido na opção cachorro.")
-           elif pressao == "":
-             messagebox.showinfo("Erro", "Pressão do paciente deve ser preenchida.")
-           elif peso == "":
-             messagebox.showinfo("Erro", "Peso do paciente deve ser preenchido.")
-           else:
-             m = PacienteM(nome, idade, temperatura, pressao, peso)
-             salvar(m)
-             messagebox.showinfo("Cadastro", f"Paciente {nome} cadastrado com sucesso!") 
+        elif idade == "":
+          messagebox.showinfo("Erro", "Idade deve ser preenchida.")
+        elif temperatura == "":
+          messagebox.showinfo("Erro", "Temperatura do paciente deve ser preenchida.")
+        elif pressao == "":
+          messagebox.showinfo("Erro", "Pressão do paciente deve ser preenchida.")
+        elif peso == "":
+          messagebox.showinfo("Erro", "Peso do paciente deve ser preenchido.")
+        else:
+          m = PacienteM(nome, idade, temperatura, pressao, peso)
+          salvar(m)
+          messagebox.showinfo("Cadastro", f"Paciente {nome} cadastrado com sucesso!") 
 
 
 def salvar(obj):
@@ -111,11 +110,11 @@ entryPeso = tk.Entry(tab1, font=("", 15))
 entryPeso.grid(row=4, column=1, sticky="nsew", padx=10, pady=5)
 
 tk.Label(tab1, text="Sexo", font=("", 15)).grid(row=5, column=0, sticky="w", padx=10)
-varSexo = tk.StringVar(value="PacienteM")
+varSexo = tk.StringVar(value="Homem")
 
-tk.Radiobutton(tab1, text="Mulher", font=("", 10), variable=varSexo, value="PacienteM").grid(row=5, column=1, sticky="w", padx=10)
-tk.Radiobutton(tab1, text="Homem", font=("", 10), variable=varSexo, value="PacienteH").grid(row=5, column=1, sticky="e", padx=10)
-tk.Button(tab1, text="Cadastrar", font=("", 10), command=cadastroPaciente).grid(row=6, columnspan=2)
+tk.Radiobutton(tab1, text="Feminino", font=("", 10), variable=varSexo, value="Mulher").grid(row=5, column=1, sticky="w", padx=10)
+tk.Radiobutton(tab1, text="Masculino", font=("", 10), variable=varSexo, value="Homem").grid(row=5, column=1, sticky="e", padx=10)
+tk.Button(tab1, text="Cadastrar", font=("", 10), command=cadastroPessoa).grid(row=6, columnspan=2, sticky="nsew")
 
 listbox = tk.Listbox(tab2)
 listbox.config(font=("", 15))

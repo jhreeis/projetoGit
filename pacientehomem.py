@@ -22,4 +22,4 @@ class PacienteH(Pessoa):
         self.__peso = peso
 
     def mostrar(self):
-        return (f"Homem que se chama {self.getNome()}, com {self.getIdade()} anos, pesando {self.getPeso()}Kg, com temperatura de {self.getTemperatura()}°C, e pressão {self.getPressao()}")
+        return (f"Homem que se chama {self.getNome()}, com {self.getIdade()} anos, pesando {self.getPeso()}Kg, com temperatura de {self.getTemperatura()}°C, e pressão {self.getPressao()}.")
