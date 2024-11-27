@@ -5,3 +5,4 @@ IMPLEMENTAÇÕES
 25/11: Início da construção do código do sistema, com as criação dos arquivos e das classes.
 26/11: Continuação da construção do código, com a criação das janelas e começo das restrições(não sei se vou terminar no dia).
 27/11(TALVEZ): Continuação da implementação de restrições no preenchimento do cadstro do paciente e mudança na forma de armazenar na lista.
+28/11(TALVEZ): Colocar algum atributo em PacienteMulher ou PacienteHomem que um terá e o outro não, para diferenciar.

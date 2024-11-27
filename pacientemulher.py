@@ -1,6 +1,6 @@
 from pessoa import Pessoa
 
-class Paciente(Pessoa):
+class PacienteM(Pessoa):
     def __init__(self, nome, idade, sexo, temperatura, pressao, peso):
         super().__init__(nome, idade, sexo)
         self.__temperatura = temperatura
