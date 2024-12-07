@@ -3,7 +3,7 @@ from pessoa import Pessoa
 #Criação da classe Paciente Homem com seus atributos e métodos
 class PacienteH(Pessoa):
     def __init__(self, nome, idade, temperatura, pressao, peso):
-        super().__init__(nome, idade, )
+        super().__init__(nome, idade,)
         self.__temperatura = temperatura
         self.__pressao = pressao
         self.__peso = peso
