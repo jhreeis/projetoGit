@@ -18,7 +18,7 @@ class PacienteH(Pessoa):
     
     def setTemperatura(self, temperatura):
         self.__temperatura = temperatura
-    def setTemperatura(self, pressao):
+    def setPressao(self, pressao):
         self.__pressao = pressao
     def setPeso(self, peso):
         self.__peso = peso
